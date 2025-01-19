@@ -158,11 +158,12 @@ Veri seti, [meteoblue](https://www.meteoblue.com/tr/hava/archive/export?daterang
                 plt.title(f"{column} Dağılımı")
                 plt.show()
           ```
-            ![alt text](image-1.png)
-            ![alt text](image-2.png)
-            ![alt text](image-3.png)
-            ![alt text](image-4.png)
-            ![alt text](image-5.png)
+            ![image](https://github.com/user-attachments/assets/f54b443f-7891-425e-bba6-fd863e970415)
+            ![image](https://github.com/user-attachments/assets/69cfd4e8-643f-447d-990a-7118742e6ea9)
+            ![image](https://github.com/user-attachments/assets/c847c442-cff3-4acb-81b4-64e6a45c666f)
+            ![image](https://github.com/user-attachments/assets/ab3c67b9-f7fb-4ab6-be71-d6bd886b9589)
+            ![image](https://github.com/user-attachments/assets/0ad1fc39-42a9-4520-b979-a8e8b26c4e1d)
+
 
         - Boxplot grafikleri kullanılarak aykırı değerler tespit edildi Özellikle: Temperature, Humidity, Cloud_Cover, Sunshine_Duration ve Pressure sütunlarında belirgin aykırı değerler bulundu. 
           
