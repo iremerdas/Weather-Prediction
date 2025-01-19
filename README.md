@@ -19,7 +19,7 @@
 - [Sonuçlar ve Karşılaştırma](#sonuçlar-ve-karşılaştırma)
 - [Örnek Kullanım](#örnek-kullanım)
 
-## Genel Bakış"
+## Genel Bakış
 
 Bu proje, bir günün her saati için günlük hava durumu parametrelerini (Sıcaklık, Nem, Bulut Kapalılığı, Güneşlenme Süresi ve Basınç) tahmin etmek üzere bir makine öğrenimi modeli oluşturmayı amaçlamaktadır. Ana hedef, geçmiş veriler ve döngüsel mevsimsel desenlere dayanarak doğru tahminler yapabilen sağlam bir sistem geliştirmektir.
 
