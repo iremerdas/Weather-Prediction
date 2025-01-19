@@ -115,7 +115,8 @@ Veri seti, [meteoblue](https://www.meteoblue.com/tr/hava/archive/export?daterang
         plt.title("Korelasyon Matrisi")
         plt.show()
         ```
-        ![Korelasyon Matrisi](image.png)
+        ![image](https://github.com/user-attachments/assets/6a8875d6-efa3-42c0-9fb2-ec7bc5bd905f)
+
 
         - Hedef değişkenle düşük korelasyona sahip sütunlar (Wind_Speed, Wind_Direction) kaldırıldı.
 
@@ -174,11 +175,12 @@ Veri seti, [meteoblue](https://www.meteoblue.com/tr/hava/archive/export?daterang
                 plt.title(f"{column} için Boxplot")
                 plt.show()
           ```
-            ![alt text](image-6.png)
-            ![alt text](image-7.png)
-            ![alt text](image-8.png)
-            ![alt text](image-9.png)
-            ![alt text](image-10.png)
+            ![image](https://github.com/user-attachments/assets/0063a315-b0f3-40f5-893b-3d837832aca3)
+            ![image](https://github.com/user-attachments/assets/78905658-66af-4d43-b22c-e40bb1c56ca4)
+            ![image](https://github.com/user-attachments/assets/bdb1fc6b-1fd0-460a-bdc0-35942bbceb86)
+            ![image](https://github.com/user-attachments/assets/88456032-f5c5-404d-a76e-8a22883577bf)
+            ![image](https://github.com/user-attachments/assets/1b0ed5bf-e4a6-4c23-afef-12e5f79dce9d)
+
 
             - Aynı zamanda veriler mevsimsel olarak normali değiştiği için mevsimsel boxplot grafiklerine de bakıldı. Örneğin;
              ```
@@ -198,8 +200,8 @@ Veri seti, [meteoblue](https://www.meteoblue.com/tr/hava/archive/export?daterang
                 plt.ylabel(column)
                 plt.show()
              ```
-             ![alt text](image-11.png)
-             ![alt text](image-12.png)
+             ![image](https://github.com/user-attachments/assets/df3a3114-8b2d-4b0b-89af-5b50ca60ad76)
+
 
 2. **Özellik Mühendisliği**
 
@@ -462,12 +464,16 @@ LightGBM, daha hızlı eğitim süresiyle rekabetçi sonuçlar sağladı.
 SVR, büyük özellik seti nedeniyle daha yavaş ve daha az hassas oldu.
 
 
+Genel;
 
 | - | Random Forest Regressor  | LightGBM Regressor | Support Vector Regressor (SVR) |
 | -- | -- | -- | -- |
-| R² | 12 | 12 | 12 |
-| MSE | 12 | 12 | 12 |
-| MAE | 12 | 12 | 12 |
+| R² | 12 | 0.9 | 12 |
+| MSE | 12 | 0.1 | 12 |
+| MAE | 12 | 0.2 | 12 |
+
+
+Hedef Değişkenlere Göre;
 
 
 
