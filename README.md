@@ -469,12 +469,13 @@ Genel;
 
 | - | Random Forest Regressor  | LightGBM Regressor | Support Vector Regressor (SVR) |
 | -- | -- | -- | -- |
-| R² | 12 | 0.9 | 12 |
-| MSE | 12 | 0.1 | 12 |
-| MAE | 12 | 0.2 | 12 |
+| R² | 0.9 | 0.9 | 0.85 |
+| MSE | 0.09 | 0.1 | 0.15 |
+| MAE | 0.07  | 0.2 | 0.19 |
 
 
 Hedef Değişkenlere Göre;
+![image](https://github.com/user-attachments/assets/bb20bf85-eabb-4cc8-a8cb-d7f830954f34)
 
 
 
