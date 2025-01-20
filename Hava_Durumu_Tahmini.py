@@ -159,7 +159,7 @@ df['Season'] = df['Month'].apply(lambda x: 'Winter' if x in [12, 1 , 2] else
                                             'Summer' if x in [6, 7, 8] else 'Autumn')
 
 # One-hot encoding ile mevsim sütununu dönüştürme
-df = pd.get_dummies(df, columns=['Season'], drop_first=True)  # İlk sütunu düşürerek multicollinearity'i önlüyoruz
+df = pd.get_dummies(df, columns=['Season'], drop_first=True)  
 
 df
 
@@ -273,7 +273,6 @@ df = df.drop(columns=['Season_Autumn'])
 
 df = df.drop(columns=['Season'])
 
-df
 
 """---
 
@@ -286,11 +285,9 @@ df['Hour_Cos'] = np.cos(2 * np.pi * df['Hour'] / 24)
 df['Month_Sin'] = np.sin(2 * np.pi * df['Month'] / 12)
 df['Month_Cos'] = np.cos(2 * np.pi * df['Month'] / 12)
 
-print(df)
 
 """Geçmiş sıcaklık değerlerini lag özellikleri olarak ekle"""
 
-df = pd.read_csv('/content/drive/MyDrive/ColabNotebooks/mli/dataset4.csv')
 
 df['Day_Sin'] = np.sin(2 * np.pi * df['Day'] / 7)
 df['Day_Cos'] = np.cos(2 * np.pi * df['Day'] / 7)
@@ -303,8 +300,6 @@ df['Temperature_Lag3'] = df['Temperature'].shift(3)
 # İlk birkaç satır NaN olacak
 df.dropna(inplace=True)
 
-print(df)
-
 """Geçmiş nem değerlerini lag özellikleri olarak ekle"""
 
 # Lag özellikleri
@@ -314,8 +309,6 @@ df['Humidity_Lag3'] = df['Humidity'].shift(3)
 
 # İlk birkaç satır NaN olacak
 df.dropna(inplace=True)
-
-print(df)
 
 """Geçmiş bulut kapalılığı değerlerini lag özellikleri olarak ekle"""
 
@@ -327,7 +320,6 @@ df['Cloud_Cover_Lag3'] = df['Cloud_Cover'].shift(3)
 # İlk birkaç satır NaN olacak
 df.dropna(inplace=True)
 
-print(df)
 
 """Geçmiş güneşlenme süresi değerlerini lag özellikleri olarak ekle"""
 
@@ -339,8 +331,6 @@ df['Sunshine_Duration_Lag3'] = df['Sunshine_Duration'].shift(3)
 # İlk birkaç satır NaN olacak
 df.dropna(inplace=True)
 
-print(df)
-
 """Geçmiş basınç değerlerini lag özellikleri olarak ekle"""
 
 # Lag özellikleri
@@ -351,8 +341,6 @@ df['Pressure_Lag3'] = df['Pressure'].shift(3)
 # İlk birkaç satır NaN olacak
 df.dropna(inplace=True)
 
-print(df)
-
 df.isnull().sum()
 
 """Geçmiş sıcaklık verilerine dayalı istatistiksel özellikler ekle"""
@@ -362,7 +350,6 @@ df['Last24_Mean'] = df['Temperature'].rolling(window=24).mean()
 df['Last24_Max'] = df['Temperature'].rolling(window=24).max()
 df['Last24_Min'] = df['Temperature'].rolling(window=24).min()
 
-print(df)
 
 """Geçmiş nem verilerine dayalı istatistiksel özellikler ekle"""
 
@@ -370,8 +357,6 @@ print(df)
 df['Last24Humidity_Mean'] = df['Humidity'].rolling(window=24).mean()
 df['Last24Humidity_Max'] = df['Humidity'].rolling(window=24).max()
 df['Last24Humidity_Min'] = df['Humidity'].rolling(window=24).min()
-
-print(df)
 
 # Eksik değerler oluştu, bunları dolduruyoruz
 df.fillna(method='bfill', inplace=True)
@@ -385,8 +370,6 @@ df['Last24Cloud_Cover_Mean'] = df['Cloud_Cover'].rolling(window=24).mean()
 df['Last24Cloud_Cover_Max'] = df['Cloud_Cover'].rolling(window=24).max()
 df['Last24Cloud_Cover_Min'] = df['Cloud_Cover'].rolling(window=24).min()
 
-print(df)
-
 # Eksik değerler oluştu, bunları dolduruyoruz
 df.fillna(method='bfill', inplace=True)
 
@@ -396,8 +379,6 @@ df.fillna(method='bfill', inplace=True)
 df['Last24Sunshine_Duration_Mean'] = df['Sunshine_Duration'].rolling(window=24).mean()
 df['Last24Sunshine_Duration_Max'] = df['Sunshine_Duration'].rolling(window=24).max()
 df['Last24Sunshine_Duration_Min'] = df['Sunshine_Duration'].rolling(window=24).min()
-
-print(df)
 
 # Eksik değerler oluştu, bunları dolduruyoruz
 df.fillna(method='bfill', inplace=True)
@@ -419,27 +400,15 @@ df.isnull().sum()
 # Eksik değerler oluştu, bunları dolduruyoruz
 df.fillna(method='bfill', inplace=True)
 
-"""dataset1: döngüsel özl (saat, ay)
-
-dataset2: döngüsel özl (saat, ay) + uç değer analizi + standartlaştırma
-
-dataset2: döngüsel özl (saat, ay, gün) + uç değer analizi + standartlaştırma
-
-"""
-
-df
 
 df = df.drop(columns=['Hour', 'Month', 'Day'])
-df
 
-"""---
+"""
+---
 
 # Model
 """
 
-df = pd.read_csv('/content/drive/MyDrive/ColabNotebooks/MLI/essay/dataset4.csv')
-
-df
 
 data = pd.DataFrame(df)
 
